@@ -33,6 +33,7 @@ Now I am far from a professional, but I can do much more than at the beginning o
 * Bootstrap
     
 ***
+
 ## Code example
 
 ### Task from Codewars
