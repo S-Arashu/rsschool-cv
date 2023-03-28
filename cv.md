@@ -78,5 +78,14 @@ function likes(names) {
 
 ## Study projects
 
-* [Site](https://github.com/S-Arashu/The-Dark-Pictures)
+* [Website](https://github.com/S-Arashu/The-Dark-Pictures)
 * [Store](https://github.com/S-Arashu/Store-or-something-like-)
+
+***
+
+## Education
+
+* Myitschool, Front-end web development course: HTML, CSS, JavaScript, ReactJS, Redux (in progress)
+* RS Schools Course «JavaScript/Front-end. Stage 1» (in progress)
+* Stepic, Front-end (in progress)
+* Sololearn, Front-end (in progress)
