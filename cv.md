@@ -89,3 +89,12 @@ function likes(names) {
 * RS Schools Course «JavaScript/Front-end. Stage 1» (in progress)
 * Stepic, Front-end (in progress)
 * Sololearn, Front-end (in progress)
+
+***
+
+## Languages
+
+* English - Intermediate/Upper-intermediate (according to the online test at efset.org).
+* Belarussian - Native.
+* Russian - Native.
+* Polish - Beginner.
