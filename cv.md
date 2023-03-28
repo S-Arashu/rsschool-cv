@@ -1,7 +1,5 @@
 # Anastasiya Tomasheva
 
-![my photo](https://scontent-waw1-1.cdninstagram.com/v/t51.2885-15/26224528_186196198797718_7535920042416799744_n.jpg?stp=dst-jpg_e35&_nc_ht=scontent-waw1-1.cdninstagram.com&_nc_cat=110&_nc_ohc=KdlEjeNU1bgAX9rGp0m&edm=ABmJApABAAAA&ccb=7-5&ig_cache_key=MTcwNDU5MjIxMTU4ODI0OTMzNA%3D%3D.2-ccb7-5&oh=00_AfD48ikLBurrpw-b8zhSOVh6IpLWndE7dzZ25MYOvRCZLA&oe=6427D2A5&_nc_sid=6136e7)
-
 ### Contacts
 
 ##### Phone number, Skype, Telegram, Viber, WhatsApp: +375(44)7-202-103
