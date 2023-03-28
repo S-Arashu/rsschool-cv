@@ -73,3 +73,10 @@ function likes(names) {
 }
 
 ```
+
+***
+
+## Study projects
+
+* [Site](https://github.com/S-Arashu/The-Dark-Pictures)
+* [Store](https://github.com/S-Arashu/Store-or-something-like-)
