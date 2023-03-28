@@ -22,6 +22,8 @@ For me everything about programming has always seemed like magic. But one day, a
 
 Now I am far from a professional, but I can do much more than at the beginning of last year (although, I will not hide, there are bouts of desperation =) ). Based on the above, we can conclude that my work experience it`s learning. To understand how inspired I am by it, I can give you an example of my training. Now, in addition to RS, I am completing paid Frontend courses. Since October last year I have studied, I have two jobs, in my spare time I only sleep, eat and sometimes go for walks) All this time nerves could fail only about the lack of understanding of any intricacies of learning, and never - because of lack of free time. Of course, I do not plan to always exclude for myself the rest, but also realized that and to learn I will never stop =)
 
+***
+
 ## Skills and Proficiency
 
 * HTML, CSS
@@ -32,3 +34,42 @@ Now I am far from a professional, but I can do much more than at the beginning o
 * React
 * Bootstrap
     
+***
+## Code example
+
+### Task from Codewars
+
+> You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item. Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+```
+[]                                -->  "no one likes this"
+["Peter"]                         -->  "Peter likes this"
+["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+```
+
+> Note: For 4 or more names, the number in "and 2 others" simply increases.
+
+### Solution
+
+```
+function likes(names) {
+  if(names.length === 0){
+    return 'no one likes this'
+  }
+  else if(names.length ===1){
+    return `${names[0]} likes this`
+  }
+  else if(names.length ===2){
+    return `${names[0]} and ${names[1]} like this`
+  }
+  else if(names.length ===3){
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+  }
+  else if(names.length > 3){
+    return `${names[0]}, ${names[1]} and ${names.length-2} others like this`
+  }
+}
+
+```
