@@ -21,3 +21,14 @@
 For me everything about programming has always seemed like magic. But one day, about ten years ago, a friend offered me to try testing (she already worked in this specialty at EPAM and offered to try me). I wasn’t hired, but in preparation for my interview, I got to know a little bit of HTML, and that’s when that little piece of magic became a reality. When I thought about changing jobs in the future, it was this episode that came to mind, and the decision was made. 
 
 Now I am far from a professional, but I can do much more than at the beginning of last year (although, I will not hide, there are bouts of desperation =) ). Based on the above, we can conclude that my work experience it`s learning. To understand how inspired I am by it, I can give you an example of my training. Now, in addition to RS, I am completing paid Frontend courses. Since October last year I have studied, I have two jobs, in my spare time I only sleep, eat and sometimes go for walks) All this time nerves could fail only about the lack of understanding of any intricacies of learning, and never - because of lack of free time. Of course, I do not plan to always exclude for myself the rest, but also realized that and to learn I will never stop =)
+
+## Skills and Proficiency
+
+* HTML, CSS
+* JavaScript
+* Git, GitHub
+* VS Code
+* Adobe Photoshop, Figma
+* React
+* Bootstrap
+    
