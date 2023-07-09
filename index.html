@@ -1,12 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Laila:300,regular,500,600,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower:regular" rel="stylesheet" />
+  <title>My CV</title>
 </head>
 <body>
-  <p>Helllloooooo</p>
+  <header class="header">
+    <video loop muted autoplay class="header__player" >
+            <source src="./assets/video/background.mp4" type="video/mp4" />
+    </video>
+    <div class="container">
+      <section class="header-section" id="profile">
+        <h1 class="section-title">Anastasiya Tomasheva</h1>
+          <img class="section-img" src="./assets/img/avatar.jpg" alt="profile-photo">
+            <nav class="nav">
+              <ul class="nav-list">
+                <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+                <li class="nav-item"><a href="#summary" class="nav-link">Summary</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#code" class="nav-link">Code</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                <li class="nav-item"><a href="#languages" class="nav-link">Languages</a></li>
+              </ul>
+            </nav>
+      </section>
+    </div>
+  </header>
+  <main class="main">
+    <div class="container main-container">
+      <section class="section" id="contacts">
+        <h2 class="section-title">Contacts</h2>
+        <ul class="section-contacts">
+          <li>Phone number, Skype, Telegram, Viber, WhatsApp: +375(44)7-202-103</li>
+          <li>E-mail: Siha.sole@gmail.com</li>
+          <li><a href="https://www.linkedin.com/in/s-arashu/">LinkedIn</a></li>
+        </ul>
+        <ul> 
+          <li>Social:</li>
+          <li><a href="https://www.tiktok.com/@happyreading03?_t=8b1AlakRHIT&_r=1">TikTok</a></li>
+          <li><a href="https://www.tiktok.com/@_arashu_?_t=8b1Ak8mhrKo&_r=1">TikTok</a></li>
+          <li><a href="https://vk.com/arashu">VK</a></li>
+          <li><a href="https://instagram.com/_s_i_h_a_?igshid=YmMyMTA2M2Y=">Instagram</a></li>
+        </ul>
+      </section>
+      <section class="section" id="summary">
+        <h2 class="section-title">About me</h2>
+        <p>For me everything about programming has always seemed like magic. But one day, about ten years ago, a friend offered me to try testing (she already worked in this specialty at EPAM and offered to try me). I wasn’t hired, but in preparation for my interview, I got to know a little bit of HTML, and that’s when that little piece of magic became a reality. When I thought about changing jobs in the future, it was this episode that came to mind, and the decision was made. </p>
+
+        <p>Now I am far from a professional, but I can do much more than at the beginning of last year (although, I will not hide, there are bouts of desperation =) ). Based on the above, we can conclude that my work experience it`s learning. To understand how inspired I am by it, I can give you an example of my training. Now, in addition to RS, I am completing paid Frontend courses. Since October last year I have studied, I have two jobs, in my spare time I only sleep, eat and sometimes go for walks) All this time nerves could fail only about the lack of understanding of any intricacies of learning, and never - because of lack of free time. Of course, I do not plan to always exclude for myself the rest, but also realized that and to learn I will never stop =)</p>
+      </section>
+      <section class="section" id="skills">
+        <h2 class="section-title">Skills and Proficiency</h2>
+        <ul>
+          <li>HTML, CSS</li>
+          <li>JavaScript</li>
+          <li>Git, GitHub</li>
+          <li>VS Code</li>
+          <li>Adobe Photoshop, Figma</li>
+          <li>React</li>
+          <li>Bootstrap</li>
+        </ul>  
+      </section>
+      <section class="section" id="code">
+        <h2 class="section-title">Code example</h2>
+        <h3>Task from Codewars</h3>
+        <p>You probably know the “like” system from Facebook and other pages. People can “like” blog posts, pictures or other items. We want to create the text that should be displayed next to such an item. Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:</p>
+        <div>
+          []                                --&rsaquo;  "no one likes this" <br>
+          ["Peter"]                         --&rsaquo;  "Peter likes this" <br>
+          ["Jacob", "Alex"]                 --&rsaquo;  "Jacob and Alex like this" <br>
+          ["Max", "John", "Mark"]           --&rsaquo;  "Max, John and Mark like this" <br>
+          ["Alex", "Jacob", "Mark", "Max"]  --&rsaquo;  "Alex, Jacob and 2 others like this" <br>
+        </div>
+        <p>Note: For 4 or more names, the number in “and 2 others” simply increases.</p>
+        <h3>Solution</h3>
+        <div>
+          function likes(names) { <br>
+            if(names.length === 0){ <br>
+              return 'no one likes this' <br>
+            } <br>
+            else if(names.length ===1){ <br>
+              return `${names[0]} likes this` <br>
+            } <br>
+            else if(names.length ===2){ <br>
+              return `${names[0]} and ${names[1]} like this` <br>
+            } <br>
+            else if(names.length ===3){ <br>
+              return `${names[0]}, ${names[1]} and ${names[2]} like this` <br>
+            } <br>
+            else if(names.length > 3){ <br>
+              return `${names[0]}, ${names[1]} and ${names.length-2} others like this` <br>
+            } <br>
+          } <br>
+        </div>  
+      </section>
+      <section class="section" id="courses">
+        <h2 class="section-title">Education</h2>
+      <ul>
+        <li>Myitschool, Front-end web development course: HTML, CSS, JavaScript, ReactJS, Redux.</li>
+        <li>RS Schools Course «JavaScript/Front-end. Stage 0» (in progress)</li>
+        <li>Stepic, Front-end (in progress)</li>
+        <li>Sololearn, Front-end (in progress)</li>
+      </ul>
+      </section>
+      <section class="section" id="projects">
+        <h2 class="section-title">Study projects</h2>
+      <ul>
+        <li><a href="https://github.com/S-Arashu/The-Dark-Pictures">Website</a></li>
+        <li><a href="https://github.com/S-Arashu/Store-or-something-like-">Store</a></li>
+        <li><a href="https://github.com/S-Arashu/Final-Project-For-ITSchool">Final Project for Myitschool</a></li>
+      </ul>
+      </section>
+      <section class="section" id="education">
+        <h2 class="section-title">Education</h2>
+        <p>Mogilev State A. Kuleshov University</p>
+      </section>
+      <section class="section" id="languages">
+        <h2 class="section-title">Languages</h2>
+      <ul>
+        <li>English - Intermediate/Upper-intermediate (according to the online test at efset.org).</li>
+        <li>Belarussian - Native.</li>
+        <li>Russian - Native.</li>
+        <li>Polish - Beginner.</li>
+      </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div>2023</div>
+      <div><a href="https://github.com/S-Arashu">S-Arashu</a></div>
+      <a href="https://rs.school/js/"><div class="footer-img"></div></a>
+    </div>
+  </footer>
 </body>
 </html>
