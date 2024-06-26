@@ -34,7 +34,7 @@ I started studying the Front about two years ago, but, unfortunately, with inter
 ***
 
 ## _Code examples_
-   * ### **Task**
+### **Task**
 ```
 Your task in order to complete this Kata is to write a function which formats a duration, given as a number of seconds, in a human-friendly way.
 
@@ -63,7 +63,9 @@ A component will not appear at all if its value happens to be zero. Hence, 1 min
 
 A unit of time must be used "as much as possible". It means that the function should not return 61 seconds, but 1 minute and 1 second instead. Formally, the duration specified by of a component must not be greater than any valid more significant unit of time.
 ```
-   * ### **Solution**
+
+### **Solution**
+
 ```
 const { assert } = require('chai');
 
