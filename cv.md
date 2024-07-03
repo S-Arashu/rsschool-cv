@@ -1,7 +1,7 @@
 # **Anastasiya Tomasheva**
 ***
 ## _Contacts_
-\
+
 **Phone:** +375447202103\
 **Email:** siha.sole@gmail.com\
 **Telegram:** @arashu_siha\
@@ -15,7 +15,7 @@
 ***
 
 ## _About me_
-\
+
 I started studying the Front about two years ago, but, unfortunately, with interruptions, since the priorities were different and I had to interrupt often. I completed the FrontEnd Developer course and received a certificate, but I still don’t have enough experience. Now it is only related to testing mailings - better than nothing, but I would like more. This area interests me very much, and I do not plan to stop only at the Front; after completing the course I will continue my studies and expand my area of ​​knowledge. In my opinion, it’s incredibly interesting to create something new and visually designed from a set of symbols. It’s like writing a book, but in code language. ✨Magically✨ 😊
 
 ***
@@ -125,7 +125,7 @@ describe("Tests", () => {
 ***
 
 ## _My works_
-\
+
 [Store-or-something-like-](https://github.com/S-Arashu/Store-or-something-like-) (HTML, CSS, JavaScript)\
 [The-Dark-Pictures](https://github.com/S-Arashu/The-Dark-Pictures) (HTML, CSS)\
 [Exam_1](https://github.com/S-Arashu/Exam_1) (HTML, CSS)\
@@ -145,5 +145,5 @@ describe("Tests", () => {
 ***
 
 ## _English level_
-\
+
 I only have a little practice when talking to friends.
