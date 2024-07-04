@@ -1,4 +1,56 @@
+@font-face {
+    font-family: Jost;
+    src: url(./assets/fonts/Jost/Jost-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: SpaceGrotesk;
+    src: url(./assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: SpaceGrotesk;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 h1 ~ img {
     width: 20%;
     height: auto;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link {
+    padding: 0 20px;
+    line-height: 50px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    cursor: pointer;
 }
