@@ -53,6 +53,15 @@ h1, .contacts, .contacts-item, .contacts-item a {
     color: #fcfcf8;
 }
 
+.socials {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
 .contacts-item a {
     text-decoration: none;
     transition: 0.3s;
@@ -78,19 +87,9 @@ h1, .contacts, .contacts-item, .contacts-item a {
     font-weight: 500;
 }
 
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1em;
-    }
-}
-
 h1 ~ img {
     width: 100%;
     height: auto;
-}
-
-.socials a:not(:last-child) {
-    padding-right: 15px;
 }
 
 .LinkedIn, .Instagram, .GitHub, .TikTok {
@@ -108,10 +107,40 @@ h1 ~ img {
 
 .nav-list {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     align-items: center;
     list-style: none;
     margin-left: 30%;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    position: relative;
+    border-bottom-style: double;
+}
+
+.nav-item::after {
+    content: "";
+    /* border-bottom-color: orange;
+    border-bottom-width: 1%;
+    transition: .3s; */
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: 0.3s ease-out;
+}
+
+.nav-item:hover::after,
+.nav-item:focus::after {
+    width: 100%;
+}
+
+.nav-item:hover {
+    font-weight: 700;
 }
 
 .nav-link {
@@ -119,8 +148,26 @@ h1 ~ img {
     line-height: 50px;
     transition: 0.3s;
     text-decoration: none;
+    display: block;
+    color: #535e69;
 }
 
 .nav-link:hover {
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1em;
+    }
+
+    .LinkedIn, .Instagram, .GitHub, .TikTok {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .LinkedIn:hover, .Instagram:hover, .GitHub:hover, .TikTok:hover {
+        width: 25px;
+        height: 25px;
+        }
 }
