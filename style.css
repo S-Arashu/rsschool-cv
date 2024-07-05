@@ -16,9 +16,21 @@ html {
     box-sizing: border-box;
 }
 
+p {
+    font-family: Jost;
+}
+
+h2 {
+    border-left-style: solid;
+    border-left-color: orange;
+    padding-left: 2%;
+    background-color: #ffa500a3;
+    border-end-end-radius: 30px;
+}
+
 .container {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 0 3% 0 35%;
 }
 
 body {
@@ -107,11 +119,11 @@ h1 ~ img {
 
 .nav-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
-    margin-left: 30%;
     flex-wrap: wrap;
+    padding: 0;
 }
 
 .nav-item {
@@ -121,9 +133,6 @@ h1 ~ img {
 
 .nav-item::after {
     content: "";
-    /* border-bottom-color: orange;
-    border-bottom-width: 1%;
-    transition: .3s; */
     display: block;
     position: absolute;
     left: 50%;
@@ -154,6 +163,10 @@ h1 ~ img {
 
 .nav-link:hover {
     cursor: pointer;
+}
+
+.section-about {
+    text-align: justify;
 }
 
 @media (max-width: 768px) {
