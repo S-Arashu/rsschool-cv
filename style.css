@@ -16,11 +16,11 @@ html {
     box-sizing: border-box;
 }
 
-p {
+p, .skills-items {
     font-family: Jost;
 }
 
-h2 {
+h2:not(:first-child) {
     border-left-style: solid;
     border-left-color: orange;
     padding-left: 2%;
@@ -167,6 +167,27 @@ h1 ~ img {
 
 .section-about {
     text-align: justify;
+}
+
+.section-skills {
+    list-style: none;
+}
+
+.skills-items {
+    line-height: 3;
+    position: relative;
+}
+
+.skills-items::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    top: 45%;
+    left: -3%;
+    border-radius: 50%;
 }
 
 @media (max-width: 768px) {
