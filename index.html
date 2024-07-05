@@ -64,7 +64,80 @@
                 </ul>
             </section>
             <section class="section" id="code">
-                <h2 class="section-title"></h2>
+                <h2 class="section-title">Code examples</h2>
+                <h3>Task</h3>
+                <div class="section-task">
+                    <p>Your task in order to complete this Kata is to write a function which formats a duration, given as a number of seconds, in a human-friendly way.</p>
+                    <p>The function must accept a non-negative integer. If it is zero, it just returns "now". Otherwise, the duration is expressed as a combination of years, days, hours, minutes and seconds.</p>
+                    <p>It is much easier to understand with an example:</p>
+                    <ul>
+                        <li class="task-element">For seconds = 62, your function should return "1 minute and 2 seconds"</li>
+                        <li class="task-element">For seconds = 3662, your function should return "1 hour, 1 minute and 2 seconds"</li>
+                    </ul>
+                    <p>For the purpose of this Kata, a year is 365 days and a day is 24 hours.</p>
+                    <p>Note that spaces are important.</p>
+                    <h4>Detailed rules</h4>
+                    <p>The resulting expression is made of components like 4 seconds, 1 year, etc. In general, a positive integer and one of the valid units of time, separated by a space. The unit of time is used in plural if the integer is greater than 1.</p>
+                    <p>The components are separated by a comma and a space (", "). Except the last component, which is separated by " and ", just like it would be written in English.</p>
+                    <p>A more significant units of time will occur before than a least significant one. Therefore, 1 second and 1 year is not correct, but 1 year and 1 second is.</p>
+                    <p>Different components have different unit of times. So there is not repeated units like in 5 seconds and 1 second.</p>
+                    <p>A component will not appear at all if its value happens to be zero. Hence, 1 minute and 0 seconds is not valid, but it should be just 1 minute.</p>
+                    <p>A unit of time must be used "as much as possible". It means that the function should not return 61 seconds, but 1 minute and 1 second instead. Formally, the duration specified by of a component must not be greater than any valid more significant unit of time.</p>
+                </div>
+                <h3>Solution</h3>
+                <pre class="hljs"><span class="hljs-keyword">const</span> { assert } = <span class="hljs-keyword">require</span>(<span class="hljs-string">'chai'</span>);
+
+describe(<span class="hljs-string">"Tests"</span>, () =&gt; {
+  
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dotest</span><span class="hljs-params">(input, expected)</span> </span>{
+    assert.strictEqual(formatDuration(input), expected, `Incorrect answer <span class="hljs-keyword">for</span> seconds=${input}`);
+  }
+  
+  it(<span class="hljs-string">"Fixed tests"</span>, () =&gt; {
+    dotest(<span class="hljs-number">0</span>, <span class="hljs-string">"now"</span>);
+    
+    dotest(<span class="hljs-number">1</span>, <span class="hljs-string">"1 second"</span>);
+    dotest(<span class="hljs-number">62</span>, <span class="hljs-string">"1 minute and 2 seconds"</span>);
+    dotest(<span class="hljs-number">120</span>, <span class="hljs-string">"2 minutes"</span>);
+    dotest(<span class="hljs-number">3600</span>, <span class="hljs-string">"1 hour"</span>);
+    dotest(<span class="hljs-number">3662</span>, <span class="hljs-string">"1 hour, 1 minute and 2 seconds"</span>);
+
+    dotest(<span class="hljs-number">15731080</span>, <span class="hljs-string">"182 days, 1 hour, 44 minutes and 40 seconds"</span>);
+    dotest(<span class="hljs-number">132030240</span>, <span class="hljs-string">"4 years, 68 days, 3 hours and 4 minutes"</span>);
+    dotest(<span class="hljs-number">205851834</span>, <span class="hljs-string">"6 years, 192 days, 13 hours, 3 minutes and 54 seconds"</span>);
+    dotest(<span class="hljs-number">253374061</span>, <span class="hljs-string">"8 years, 12 days, 13 hours, 41 minutes and 1 second"</span>);
+    dotest(<span class="hljs-number">242062374</span>, <span class="hljs-string">"7 years, 246 days, 15 hours, 32 minutes and 54 seconds"</span>);
+    dotest(<span class="hljs-number">101956166</span>, <span class="hljs-string">"3 years, 85 days, 1 hour, 9 minutes and 26 seconds"</span>);
+    dotest(<span class="hljs-number">33243586</span>, <span class="hljs-string">"1 year, 19 days, 18 hours, 19 minutes and 46 seconds"</span>);
+  });
+
+
+  it(<span class="hljs-string">"random tests"</span>, () =&gt; {
+    
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sol</span><span class="hljs-params">(seconds)</span> </span>{
+      <span class="hljs-keyword">if</span> (seconds == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">'now'</span>;
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">formatComponents</span><span class="hljs-params">(x)</span> </span>{
+        <span class="hljs-keyword">let</span> firsts = x.slice(<span class="hljs-number">0</span>, <span class="hljs-number">-1</span>).join(<span class="hljs-string">', '</span>);
+        <span class="hljs-keyword">return</span> (firsts &amp;&amp; firsts + <span class="hljs-string">' and '</span>) + x[x.length - <span class="hljs-number">1</span>];
+      }
+
+      <span class="hljs-keyword">let</span> components = [<span class="hljs-string">"year"</span>, <span class="hljs-string">"day"</span>, <span class="hljs-string">"hour"</span>, <span class="hljs-string">"minute"</span>, <span class="hljs-string">"second"</span>];
+      <span class="hljs-keyword">let</span> times = [<span class="hljs-number">31536000</span>, <span class="hljs-number">86400</span>, <span class="hljs-number">3600</span>, <span class="hljs-number">60</span>, <span class="hljs-number">1</span>];
+
+      <span class="hljs-keyword">return</span> formatComponents(
+        times.map((secondsByUnit, i) =&gt; {
+          <span class="hljs-keyword">let</span> value = (seconds / secondsByUnit) | <span class="hljs-number">0</span>;
+          seconds %= secondsByUnit;
+          <span class="hljs-keyword">return</span> value == <span class="hljs-number">0</span> ? <span class="hljs-string">''</span> : value + <span class="hljs-string">' '</span> + components[i] + (value &gt; <span class="hljs-number">1</span> ? <span class="hljs-string">'s'</span> : <span class="hljs-string">''</span>);
+        }).filter(<span class="hljs-keyword">Boolean</span>));
+    }
+    
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) {
+      <span class="hljs-keyword">const</span> n = Math.floor(Math.random() * <span class="hljs-number">10000000</span>);
+      dotest(n, sol(n));
+    }
+  });
+});</pre>
             </section>
             <section class="section" id="works">
                 <h2 class="section-title"></h2>
