@@ -16,7 +16,7 @@ html {
     box-sizing: border-box;
 }
 
-p, .skills-items, .task-element {
+p, .skills-items, .task-element, .education-items, .education-desc {
     font-family: Jost;
 }
 
@@ -94,8 +94,13 @@ h1 {
     font-weight: 300;
 }
 
-.contacts-item span {
+.contacts-item span, .education-items {
     font-weight: 500;
+}
+
+.education-desc {
+    font-weight: 300;
+    line-height: 2;
 }
 
 h1 ~ img {
@@ -231,6 +236,26 @@ h1 ~ img {
     font-weight: 700;
 }
 
+.section-education {
+    list-style: none;
+}
+
+.education-items {
+    position: relative;
+}
+
+.education-items::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    top: 18%;
+    left: -3%;
+    border-radius: 50%;
+}
+
 @media (max-width: 768px) {
     
     .contacts-item {
@@ -280,6 +305,10 @@ h1 ~ img {
     .skills-items::before {
         top: 42%;
         left: -6%;
+    }
+
+    .education-items::before {
+        left: -4%;
     }
 }
 
