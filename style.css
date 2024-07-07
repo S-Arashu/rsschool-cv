@@ -53,14 +53,14 @@ body {
     top: 0;
     text-align: center;
     transition: .3s;
-    padding-top: 3%;
 }
 
 h1 {
     margin-top: 3%;
     font-size: 1.6em;
     transition: 0.3s;
-    color: #fcfcf8;
+    color: #373731;
+    text-align: center;
 }
 
 .socials {
@@ -70,6 +70,11 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
+}
+
+.LinkedIn, .Instagram, .GitHub, .TikTok {
+    width: 30px;
+    height: 30px;
 }
 
 .contacts-item a {
@@ -103,7 +108,7 @@ h1 {
     line-height: 2;
 }
 
-h1 ~ img {
+.main-image {
     width: 100%;
     height: auto;
 }
@@ -114,7 +119,7 @@ h1 ~ img {
     margin: 5% 0 5% 0;
 }
 
-.LinkedIn:hover, .Instagram:hover, .GitHub:hover, .TikTok:hover {
+.LinkedIn:hover, .Instagram:hover, .TikTok:hover {
     cursor: pointer;
     width: 35px;
     height: 35px;
@@ -256,6 +261,77 @@ h1 ~ img {
     border-radius: 50%;
 }
 
+footer {
+    background-color: rgba(36, 34, 41, 0.742);
+}
+
+.container-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 0;
+}
+
+.footer-year {
+    color: #fcfcf8;
+}
+
+.footer-rsschool {
+    text-align: end;
+}
+
+.rsschool {
+    width: 60%;
+    transition: .3s;
+    filter: brightness(70%);
+}
+
+.rsschool:hover, .GitHub:hover {
+    transform: scale(.9);
+    filter: brightness(100%);
+}
+
+.top {
+    width: 40px;
+    height: 40px;
+    background-color: #ffa5004a;
+    border-radius: 50px;
+    position: fixed;
+    left: 30.5%;
+    bottom: 1%;
+    transition: .3s;
+}
+
+.top::before {
+    content: "";
+    display: block;
+    background-color: black;
+    width: 15px;
+    height: 3px;
+    position: relative;
+    top: 40%;
+    left: 22%;
+    transform: rotate(124deg);
+}
+
+.top::after {
+    content: "";
+    display: block;
+    background-color: black;
+    width: 15px;
+    height: 3px;
+    position: relative;
+    top: 33%;
+    left: 40%;
+    transform: rotate(237deg);
+}
+
+.top:hover {
+    background-color: #ffa500b0;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 13px rgba(46, 49, 52, 0.2);
+}
+
 @media (max-width: 768px) {
     
     .contacts-item {
@@ -287,14 +363,29 @@ h1 ~ img {
     p, li, h4 {
         font-size: .7em;
     }
+
+    .top {
+        width: 30px;
+        height: 30px;
+    }
+
+    .top::before, .top::after {
+        width: 13px;
+    }
+
+    .top::after {
+        top: 30%;
+        left: 41%;
+    }
+
+    .top::before {
+        top: 39%;
+    }
 }
 
 @media (max-width: 650px) {
-    /* .socials-LinkedIn, .socials-Instagram, .socials-GitHub, .socials-TikTok {
-        margin-right: 30%;
-    } */
 
-    .socials-LinkedIn, .socials-Instagram, .socials-GitHub, .socials-TikTok {
+    .socials-LinkedIn, .socials-Instagram, .socials-TikTok {
         margin-bottom: 5%;
     }
 
@@ -310,11 +401,19 @@ h1 ~ img {
     .education-items::before {
         left: -4%;
     }
+
+    .footer-year {
+        font-size: .7em;
+    }
+
+    .footer-rsschool {
+        width: 50%;
+    }
 }
 
 @media (max-width: 500px) {
     
-    h1~img {
+    .main-image {
         width: 60%;
     }
     
@@ -338,5 +437,9 @@ h1 ~ img {
         flex-direction: row;
         justify-content: space-evenly;
         padding-top: 5%;
+    }
+
+    .top {
+        left: 90%;
     }
 }
