@@ -221,7 +221,7 @@ h1 ~ img {
     /* word-break: break-all; */
 }
 
-.store, .dark-pictures, .shop, .walking-dead, .quotes {
+.store, .dark-pictures, .shop, .walking-dead, .quotes, .section-english {
     width: 100%;
     transition: .3s;
     box-shadow: 0px 0px 20px 13px rgba(34, 60, 80, 0.2);
