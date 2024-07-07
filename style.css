@@ -20,7 +20,7 @@ p, .skills-items, .task-element {
     font-family: Jost;
 }
 
-h2:not(:first-child) {
+h2 {
     border-left-style: solid;
     border-left-color: orange;
     padding-left: 2%;
@@ -30,7 +30,7 @@ h2:not(:first-child) {
 
 .container {
     max-width: 1440px;
-    margin: 0 3% 0 35%;
+    margin: 0 5% 0 35%;
 }
 
 body {
@@ -52,16 +52,14 @@ body {
     position: fixed;
     top: 0;
     text-align: center;
+    transition: .3s;
+    padding-top: 3%;
 }
 
 h1 {
     margin-top: 3%;
-    margin-bottom: 3%;
     font-size: 1.6em;
     transition: 0.3s;
-}
-
-h1, .contacts, .contacts-item, .contacts-item a {
     color: #fcfcf8;
 }
 
@@ -77,6 +75,7 @@ h1, .contacts, .contacts-item, .contacts-item a {
 .contacts-item a {
     text-decoration: none;
     transition: 0.3s;
+    color: black;
 }
 
 .contacts-item a:hover {
@@ -200,7 +199,7 @@ h1 ~ img {
 
 .hljs {
     display: block;
-    overflow-x: auto;
+    white-space: break-spaces;
     padding: 0.5em;
     background: rgb(240, 240, 240);
     color: rgb(68, 68, 68);
@@ -217,18 +216,37 @@ h1 ~ img {
     /* word-break: break-all; */
 }
 
+.store, .dark-pictures, .shop, .walking-dead, .quotes {
+    width: 100%;
+    transition: .3s;
+    box-shadow: 0px 0px 20px 13px rgba(34, 60, 80, 0.2);
+}
+
+.store:hover, .dark-pictures:hover, .shop:hover, .walking-dead:hover, .quotes:hover {
+    filter: brightness(70%);
+    transform: scale(.9);
+}
+
+.works-name {
+    font-weight: 700;
+}
+
 @media (max-width: 768px) {
     
     .contacts-item {
         font-size: .7em;
     }
     
-    h1 {
+    h1, .nav-link {
         font-size: 1em;
     }
 
-    .contacts {
+    .contacts, h2 {
         font-size: .9em;
+    }
+
+    h3 {
+        font-size: .8em;
     }
 
     .LinkedIn, .Instagram, .GitHub, .TikTok {
@@ -239,5 +257,57 @@ h1 ~ img {
     .LinkedIn:hover, .Instagram:hover, .GitHub:hover, .TikTok:hover {
         width: 25px;
         height: 25px;
-        }
+    }
+
+    p, li, h4 {
+        font-size: .7em;
+    }
+}
+
+@media (max-width: 650px) {
+    /* .socials-LinkedIn, .socials-Instagram, .socials-GitHub, .socials-TikTok {
+        margin-right: 30%;
+    } */
+
+    .socials-LinkedIn, .socials-Instagram, .socials-GitHub, .socials-TikTok {
+        margin-bottom: 5%;
+    }
+
+    .socials {
+        flex-direction: column;
+    }
+
+    .skills-items::before {
+        top: 42%;
+        left: -6%;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    h1~img {
+        width: 60%;
+    }
+    
+    .nav-item {
+        margin-right: 5%;
+    }
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .aside {
+        height: 400px;
+        position: relative;
+        width: 100%;
+    }
+
+    .socials {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 5%;
+    }
 }
