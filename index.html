@@ -5,9 +5,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anastasiya Tomasheva. CV</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/img/favicon.ico">
 </head>
 <body>
-    <h1>Anastasiya Tomasheva</h1>
-    <img src="./img/206.jpg" alt="Anastasiya Tomasheva">
+    <header class="header">
+        <div class="container">
+        <h1 class="section-title">Anastasiya Tomasheva</h1>
+    </div>
+        <div class="container">
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About me</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#code" class="nav-link">Code examples</a></li>
+                    <li class="nav-item"><a href="#works" class="nav-link">My works</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+                    <li class="nav-item"><a href="#english" class="nav-link">English level</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <aside class="aside">
+                <img class="main-image" src="./assets/img/206.jpg" alt="Anastasiya Tomasheva">
+            <div class="section">
+                <div class="socials">
+                    <div class="socials-LinkedIn"><a href="https://www.linkedin.com/feed/" target="_blank"><img class="LinkedIn" src="./assets/img/linkedin.png" alt="LinkedIn"></a></div>
+                    <div class="socials-Instagram"><a href="https://www.instagram.com/_s_i_h_a_/" target="_blank"><img class="Instagram" src="./assets/img/instagram.png" alt="Instagram"></a></div>
+                    <div class="socials-TikTok"><a href="https://www.tiktok.com/@happyreading03" target="_blank"><img class="TikTok" src="./assets/img/tiktok.png" alt="TikTok"></a></div>
+                </div>
+            </div>
+        </aside>
+        <div class="container">
+            <section class="section" id="contacts">
+                <h2 class="section-title contacts">Contacts</h2>
+                <ul class="section-contacts">
+                    <li class="contacts-item"><span>Phone number:</span><a href="tel:375447202103"> +375447202103</a></li>
+                    <li class="contacts-item"><span>Email:</span> <a href="mailto:siha.sole@gmail.com">siha.sole@gmail.com</a></li>
+                    <li class="contacts-item"><span>Telegram:</span> <a href="https://t.me/arashu_siha" target="_blank">@arashu_siha</a></li>
+                    <li class="contacts-item"><span>Skype:</span> <a href="skype:siha.sole?chat" target="_blank">siha.sole</a></li>
+                </ul>
+            </section>
+            <section class="section" id="about">
+                <h2 class="section-title">About me</h2>
+                <p class="section-about">I started studying the Front about two years ago, but, unfortunately, with interruptions, since the priorities were different and I had to interrupt often. I completed the FrontEnd Developer course and received a certificate, but I still don’t have enough experience. Now it is only related to testing mailings - better than nothing, but I would like more. This area interests me very much, and I do not plan to stop only at the Front; after completing the course I will continue my studies and expand my area of ​​knowledge. In my opinion, it’s incredibly interesting to create something new and visually designed from a set of symbols. It’s like writing a book, but in code language. ✨Magically✨ 😊
+                </p>
+            </section>
+            <section class="section" id="skills">
+                <h2 class="section-title">Skills</h2>
+                <ul class="section-skills">
+                    <li class="skills-items">HTML, CSS</li>
+                    <li class="skills-items">JavaScript</li>
+                    <li class="skills-items">Git, GitHub</li>
+                    <li class="skills-items">VS Code</li>
+                    <li class="skills-items">Adobe Photoshop</li>
+                    <li class="skills-items">Figma</li>
+                    <li class="skills-items">React (beginner)</li>
+                    <li class="skills-items">PHP (beginner)</li>
+                </ul>
+            </section>
+            <section class="section" id="code">
+                <h2 class="section-title">Code examples</h2>
+                <h3>Task</h3>
+                <div class="section-task">
+                    <p>Your task in order to complete this Kata is to write a function which formats a duration, given as a number of seconds, in a human-friendly way.</p>
+                    <p>The function must accept a non-negative integer. If it is zero, it just returns "now". Otherwise, the duration is expressed as a combination of years, days, hours, minutes and seconds.</p>
+                    <p>It is much easier to understand with an example:</p>
+                    <ul>
+                        <li class="task-element">For seconds = 62, your function should return "1 minute and 2 seconds"</li>
+                        <li class="task-element">For seconds = 3662, your function should return "1 hour, 1 minute and 2 seconds"</li>
+                    </ul>
+                    <p>For the purpose of this Kata, a year is 365 days and a day is 24 hours.</p>
+                    <p>Note that spaces are important.</p>
+                    <h4>Detailed rules</h4>
+                    <p>The resulting expression is made of components like 4 seconds, 1 year, etc. In general, a positive integer and one of the valid units of time, separated by a space. The unit of time is used in plural if the integer is greater than 1.</p>
+                    <p>The components are separated by a comma and a space (", "). Except the last component, which is separated by " and ", just like it would be written in English.</p>
+                    <p>A more significant units of time will occur before than a least significant one. Therefore, 1 second and 1 year is not correct, but 1 year and 1 second is.</p>
+                    <p>Different components have different unit of times. So there is not repeated units like in 5 seconds and 1 second.</p>
+                    <p>A component will not appear at all if its value happens to be zero. Hence, 1 minute and 0 seconds is not valid, but it should be just 1 minute.</p>
+                    <p>A unit of time must be used "as much as possible". It means that the function should not return 61 seconds, but 1 minute and 1 second instead. Formally, the duration specified by of a component must not be greater than any valid more significant unit of time.</p>
+                </div>
+                <h3>Solution</h3>
+                <pre class="hljs"><span class="hljs-keyword">const</span> { assert } = <span class="hljs-keyword">require</span>(<span class="hljs-string">'chai'</span>);
+
+describe(<span class="hljs-string">"Tests"</span>, () =&gt; {
+  
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">dotest</span><span class="hljs-params">(input, expected)</span> </span>{
+    assert.strictEqual (formatDuration (input), expected, `Incorrect answer <span class="hljs-keyword">for</span> seconds=${input}`);
+  }
+  
+  it(<span class="hljs-string">"Fixed tests"</span>, () =&gt; {
+    dotest(<span class="hljs-number">0</span>, <span class="hljs-string">"now"</span>);
+    
+    dotest(<span class="hljs-number">1</span>, <span class="hljs-string">"1 second"</span>);
+    dotest(<span class="hljs-number">62</span>, <span class="hljs-string">"1 minute and 2 seconds"</span>);
+    dotest(<span class="hljs-number">120</span>, <span class="hljs-string">"2 minutes"</span>);
+    dotest(<span class="hljs-number">3600</span>, <span class="hljs-string">"1 hour"</span>);
+    dotest(<span class="hljs-number">3662</span>, <span class="hljs-string">"1 hour, 1 minute and 2 seconds"</span>);
+
+    dotest(<span class="hljs-number">15731080</span>, <span class="hljs-string">"182 days, 1 hour, 44 minutes and 40 seconds"</span>);
+    dotest(<span class="hljs-number">132030240</span>, <span class="hljs-string">"4 years, 68 days, 3 hours and 4 minutes"</span>);
+    dotest(<span class="hljs-number">205851834</span>, <span class="hljs-string">"6 years, 192 days, 13 hours, 3 minutes and 54 seconds"</span>);
+    dotest(<span class="hljs-number">253374061</span>, <span class="hljs-string">"8 years, 12 days, 13 hours, 41 minutes and 1 second"</span>);
+    dotest(<span class="hljs-number">242062374</span>, <span class="hljs-string">"7 years, 246 days, 15 hours, 32 minutes and 54 seconds"</span>);
+    dotest(<span class="hljs-number">101956166</span>, <span class="hljs-string">"3 years, 85 days, 1 hour, 9 minutes and 26 seconds"</span>);
+    dotest(<span class="hljs-number">33243586</span>, <span class="hljs-string">"1 year, 19 days, 18 hours, 19 minutes and 46 seconds"</span>);
+  });
+
+
+  it(<span class="hljs-string">"random tests"</span>, () =&gt; {
+    
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sol</span><span class="hljs-params">(seconds)</span> </span>{
+      <span class="hljs-keyword">if</span> (seconds == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-string">'now'</span>;
+      <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">formatComponents</span><span class="hljs-params">(x)</span> </span>{
+        <span class="hljs-keyword">let</span> firsts = x.slice(<span class="hljs-number">0</span>, <span class="hljs-number">-1</span>).join(<span class="hljs-string">', '</span>);
+        <span class="hljs-keyword">return</span> (firsts &amp;&amp; firsts + <span class="hljs-string">' and '</span>) + x[x.length - <span class="hljs-number">1</span>];
+      }
+
+      <span class="hljs-keyword">let</span> components = [<span class="hljs-string">"year"</span>, <span class="hljs-string">"day"</span>, <span class="hljs-string">"hour"</span>, <span class="hljs-string">"minute"</span>, <span class="hljs-string">"second"</span>];
+      <span class="hljs-keyword">let</span> times = [<span class="hljs-number">31536000</span>, <span class="hljs-number">86400</span>, <span class="hljs-number">3600</span>, <span class="hljs-number">60</span>, <span class="hljs-number">1</span>];
+
+      <span class="hljs-keyword">return</span> formatComponents(
+        times.map((secondsByUnit, i) =&gt; {
+          <span class="hljs-keyword">let</span> value = (seconds / secondsByUnit) | <span class="hljs-number">0</span>;
+          seconds %= secondsByUnit;
+          <span class="hljs-keyword">return</span> value == <span class="hljs-number">0</span> ? <span class="hljs-string">''</span> : value + <span class="hljs-string">' '</span> + components[i] + (value &gt; <span class="hljs-number">1</span> ? <span class="hljs-string">'s'</span> : <span class="hljs-string">''</span>);
+        }).filter(<span class="hljs-keyword">Boolean</span>));
+    }
+    
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">100</span>; i++) {
+      <span class="hljs-keyword">const</span> n = Math.floor(Math.random() * <span class="hljs-number">10000000</span>);
+      dotest(n, sol(n));
+    }
+  });
+});</pre>
+            </section>
+            <section class="section" id="works">
+                <h2 class="section-title">My works</h2>
+                    <p class="works-name">Store-or-something-like- (HTML, CSS, JavaScript)</p>
+                    <a class="works-example" target="_blank" href="https://github.com/S-Arashu/Store-or-something-like-"><img class="store" src="./assets/img/store.png" alt="store"></a>
+                    <p class="works-name">The-Dark-Pictures (HTML, CSS)</p>
+                    <a class="works-example" target="_blank" href="https://github.com/S-Arashu/The-Dark-Pictures"><img class="dark-pictures" src="./assets/img/dark-pictures.png" alt="dark-pictures"></a>
+                    <p class="works-name">Exam_1 (HTML, CSS)</p>
+                    <a class="works-example" target="_blank" href="https://github.com/S-Arashu/Exam_1"><img class="shop" src="./assets/img/shop.png" alt="shop"></a>
+                    <p class="works-name">Final-Project-For-ITSchool (HTML, CSS, JavaScript, React)</p>
+                    <a class="works-example" target="_blank" href="https://github.com/S-Arashu/Final-Project-For-ITSchool"><img class="walking-dead" src="./assets/img/walking-dead.png" alt="walking-dead"></a>
+                    <p class="works-name">Quotes (CSS - will be supplemented)</p>
+                    <a class="works-example" target="_blank" href="https://github.com/stars/S-Arashu/lists/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B"><img class="quotes" src="./assets/img/quotes.png" alt="quotes"></a>
+            </section>
+            <section class="section" id="education">
+                <h2 class="section-title">Education</h2>
+                <ul class="section-education">
+                    <li class="education-items">Mogilev State A. Kuleshov University
+                        <ul>
+                            <li class="education-desc">Faculty of Slavic Philology, print media journalist</li>
+                        </ul>
+                    </li>
+                    <li class="education-items">MyItSchool
+                        <ul>
+                            <li class="education-desc">Frontend developer</li>
+                        </ul>
+                    </li>
+                    <li class="education-items">Stepik
+                        <ul>
+                            <li class="education-desc">In process</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section class="section" id="english">
+                <h2 class="section-title">English level</h2>
+                <img class="section-english" src="./assets/img/English_level.png" alt="english-level">
+                <p>I only have a little practice when talking to friends.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container container-footer">
+            <div class="socials-GitHub"><a href="https://github.com/S-Arashu" target="_blank"><img class="GitHub" src="./assets/img/github.png" alt="GitHub"></a></div>
+            <div class="footer-year">© 2024</div>
+            <div class="footer-rsschool"><a href="https://rs.school/courses/javascript-preschool-ru" target="_blank"><img class="rsschool" src="./assets/img/rss.svg" alt="rsschool"></a></div>
+        </div>
+    </footer>
+        <a class="top" href="#"></a>
 </body>
 </html>
