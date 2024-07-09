@@ -1,0 +1,445 @@
+@font-face {
+    font-family: Jost;
+    src: url(./assets/fonts/Jost/Jost-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: SpaceGrotesk;
+    src: url(./assets/fonts/Space_Grotesk/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+p, .skills-items, .task-element, .education-items, .education-desc {
+    font-family: Jost;
+}
+
+h2 {
+    border-left-style: solid;
+    border-left-color: orange;
+    padding-left: 2%;
+    background-color: #ffa500a3;
+    border-end-end-radius: 30px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 5% 0 35%;
+}
+
+body {
+    font-family: SpaceGrotesk;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fcfcf8;
+}
+
+.aside {
+    background: rgb(19, 59, 7);
+    background: linear-gradient(180deg, rgba(19, 59, 7, 1) 28%, rgba(36, 34, 41, 1) 55%);
+    width: 30%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    transition: .3s;
+}
+
+h1 {
+    margin-top: 3%;
+    font-size: 1.6em;
+    transition: 0.3s;
+    color: #373731;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+.LinkedIn, .Instagram, .GitHub, .TikTok {
+    width: 30px;
+    height: 30px;
+}
+
+.contacts-item a {
+    text-decoration: none;
+    transition: 0.3s;
+    color: black;
+}
+
+.contacts-item a:hover {
+    color: orange;
+}
+
+.section-contacts {
+    list-style: none;
+    text-align: left;
+    padding-left: 3%;
+}
+
+.contacts-item {
+    font-family: Jost;
+    line-height: 2em;
+    font-weight: 300;
+}
+
+.contacts-item span, .education-items {
+    font-weight: 500;
+}
+
+.education-desc {
+    font-weight: 300;
+    line-height: 2;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+}
+
+.LinkedIn, .Instagram, .GitHub, .TikTok {
+    transition: 0.3s;
+    filter: brightness(70%);
+    margin: 5% 0 5% 0;
+}
+
+.LinkedIn:hover, .Instagram:hover, .TikTok:hover {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    filter: brightness(100%);
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+    border-bottom-style: double;
+}
+
+.nav-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: orange;
+    transition: 0.3s ease-out;
+}
+
+.nav-item:hover::after,
+.nav-item:focus::after {
+    width: 100%;
+}
+
+.nav-item:hover {
+    font-weight: 700;
+}
+
+.nav-link {
+    padding: 0 20px;
+    line-height: 50px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: block;
+    color: #535e69;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+}
+
+.section-about {
+    text-align: justify;
+}
+
+.section-skills {
+    list-style: none;
+}
+
+.skills-items {
+    line-height: 3;
+    position: relative;
+}
+
+.skills-items::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    top: 45%;
+    left: -3%;
+    border-radius: 50%;
+}
+
+.section-task {
+    -webkit-box-shadow: 0px 0px 10px 11px rgba(34, 60, 80, 0.2) inset;
+    -moz-box-shadow: 0px 0px 10px 11px rgba(34, 60, 80, 0.2) inset;
+    box-shadow: 0px 0px 10px 11px rgba(34, 60, 80, 0.2) inset;
+    padding: 1.5% 3%;
+    border-radius: 20px;
+}
+
+.hljs {
+    display: block;
+    white-space: break-spaces;
+    padding: 0.5em;
+    background: rgb(240, 240, 240);
+    color: rgb(68, 68, 68);
+    /* word-break: break-all; */
+}
+
+.hljs-keyword, .hljs-title {
+    font-weight: 700;
+    /* word-break: break-all; */
+}
+
+.hljs-string, .hljs-title, .hljs-number {
+    color: rgb(136, 0, 0);
+    /* word-break: break-all; */
+}
+
+.store, .dark-pictures, .shop, .walking-dead, .quotes, .section-english {
+    width: 100%;
+    transition: .3s;
+    box-shadow: 0px 0px 20px 13px rgba(34, 60, 80, 0.2);
+}
+
+.store:hover, .dark-pictures:hover, .shop:hover, .walking-dead:hover, .quotes:hover {
+    filter: brightness(70%);
+    transform: scale(.9);
+}
+
+.works-name {
+    font-weight: 700;
+}
+
+.section-education {
+    list-style: none;
+}
+
+.education-items {
+    position: relative;
+}
+
+.education-items::before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: orange;
+    position: absolute;
+    top: 18%;
+    left: -3%;
+    border-radius: 50%;
+}
+
+footer {
+    background-color: rgba(36, 34, 41, 0.742);
+}
+
+.container-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 0;
+}
+
+.footer-year {
+    color: #fcfcf8;
+}
+
+.footer-rsschool {
+    text-align: end;
+}
+
+.rsschool {
+    width: 60%;
+    transition: .3s;
+    filter: brightness(70%);
+}
+
+.rsschool:hover, .GitHub:hover {
+    transform: scale(.9);
+    filter: brightness(100%);
+}
+
+.top {
+    width: 40px;
+    height: 40px;
+    background-color: #ffa5004a;
+    border-radius: 50px;
+    position: fixed;
+    left: 30.5%;
+    bottom: 1%;
+    transition: .3s;
+}
+
+.top::before {
+    content: "";
+    display: block;
+    background-color: black;
+    width: 15px;
+    height: 3px;
+    position: relative;
+    top: 40%;
+    left: 22%;
+    transform: rotate(124deg);
+}
+
+.top::after {
+    content: "";
+    display: block;
+    background-color: black;
+    width: 15px;
+    height: 3px;
+    position: relative;
+    top: 33%;
+    left: 40%;
+    transform: rotate(237deg);
+}
+
+.top:hover {
+    background-color: #ffa500b0;
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 13px rgba(46, 49, 52, 0.2);
+}
+
+@media (max-width: 768px) {
+    
+    .contacts-item {
+        font-size: .7em;
+    }
+    
+    h1, .nav-link {
+        font-size: 1em;
+    }
+
+    .contacts, h2 {
+        font-size: .9em;
+    }
+
+    h3 {
+        font-size: .8em;
+    }
+
+    .LinkedIn, .Instagram, .GitHub, .TikTok {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .LinkedIn:hover, .Instagram:hover, .GitHub:hover, .TikTok:hover {
+        width: 25px;
+        height: 25px;
+    }
+
+    p, li, h4 {
+        font-size: .7em;
+    }
+
+    .top {
+        width: 30px;
+        height: 30px;
+    }
+
+    .top::before, .top::after {
+        width: 13px;
+    }
+
+    .top::after {
+        top: 30%;
+        left: 41%;
+    }
+
+    .top::before {
+        top: 39%;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .socials-LinkedIn, .socials-Instagram, .socials-TikTok {
+        margin-bottom: 5%;
+    }
+
+    .socials {
+        flex-direction: column;
+    }
+
+    .skills-items::before {
+        top: 42%;
+        left: -6%;
+    }
+
+    .education-items::before {
+        left: -4%;
+    }
+
+    .footer-year {
+        font-size: .7em;
+    }
+
+    .footer-rsschool {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    
+    .main-image {
+        width: 60%;
+    }
+    
+    .nav-item {
+        margin-right: 5%;
+    }
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+    }
+
+    .aside {
+        height: 400px;
+        position: relative;
+        width: 100%;
+    }
+
+    .socials {
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding-top: 5%;
+    }
+
+    .top {
+        left: 90%;
+    }
+}
