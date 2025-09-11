@@ -34,3 +34,75 @@ Hello! Nice to meet you 😊 I\`m Anastasia, person who sometimes enormous creat
 - PHP (beginner)
 
 ---
+
+## _Code examples_
+
+### **Task**
+
+```
+The purpose of this kata is to implement the undoRedo function.
+
+This function takes an object and returns an object that has these actions to be performed on the object passed as a parameter:
+
+set(key, value) Assigns the value to the key. If the key does not exist, creates it.
+
+get(key) Returns the value associated to the key.
+
+del(key) removes the key from the object.
+
+undo() Undo the last operation (set or del) on the object. Throws an exception if there is no operation to undo.
+
+redo() Redo the last undo operation (redo is only possible after an undo). Throws an exception if there is no operation to redo.
+
+After set() or del() are called, there is nothing to redo.
+
+All actions must affect to the object passed to undoRedo(object) function. So you can not work with a copy of the object.
+
+Any set/del after an undo should disallow new redos.
+```
+
+### **Solution**
+
+```
+function undoRedo(obj) {
+  const history = [];
+  const undone = [];
+
+  return {
+    set: (key, value) => {
+      history.push({ type: 'set', key, oldValue: obj[key], newValue: value });
+      undone.length = 0;
+      obj[key] = value;
+    },
+    get: (key) => obj[key],
+    del: (key) => {
+      history.push({ type: 'del', key, oldValue: obj[key] });
+      undone.length = 0;
+      delete obj[key];
+    },
+    undo: () => {
+      if (history.length === 0) throw new Error('No operation to undo');
+      const lastOperation = history.pop();
+      undone.push(lastOperation);
+      if (lastOperation.type === 'set') {
+        obj[lastOperation.key] = lastOperation.oldValue;
+        if (lastOperation.oldValue === undefined) delete obj[lastOperation.key];
+      } else if (lastOperation.type === 'del') {
+        obj[lastOperation.key] = lastOperation.oldValue;
+      }
+    },
+    redo: () => {
+      if (undone.length === 0) throw new Error('No operation to redo');
+      const lastUndone = undone.pop();
+      history.push(lastUndone);
+      if (lastUndone.type === 'set') {
+        obj[lastUndone.key] = lastUndone.newValue;
+      } else if (lastUndone.type === 'del') {
+        delete obj[lastUndone.key];
+      }
+    }
+  };
+}
+```
+
+---
