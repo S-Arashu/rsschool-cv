@@ -116,3 +116,18 @@ function undoRedo(obj) {
 [Quotes](https://github.com/stars/S-Arashu/lists/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B) (CSS - will be supplemented)
 
 ---
+
+## _Education_
+
+- **Mogilev State A. Kuleshov University**
+  - Faculty of Slavic Philology, print media journalist
+- **MyItSchool**
+  - Frontend developer
+- **RSSchool**
+  - In process
+
+---
+
+## _English level_
+
+Intermediate(B1)
