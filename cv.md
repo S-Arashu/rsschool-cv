@@ -106,3 +106,13 @@ function undoRedo(obj) {
 ```
 
 ---
+
+## _My works_
+
+[Store-or-something-like-](https://github.com/S-Arashu/Store-or-something-like-) (HTML, CSS, JavaScript)\
+[The-Dark-Pictures](https://github.com/S-Arashu/The-Dark-Pictures) (HTML, CSS)\
+[Exam_1](https://github.com/S-Arashu/Exam_1) (HTML, CSS)\
+[Final-Project-For-ITSchool](https://github.com/S-Arashu/Final-Project-For-ITSchool) (HTML, CSS, JavaScript, React)\
+[Quotes](https://github.com/stars/S-Arashu/lists/%D1%86%D0%B8%D1%82%D0%B0%D1%82%D1%8B) (CSS - will be supplemented)
+
+---
